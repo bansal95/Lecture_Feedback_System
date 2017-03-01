@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<fieldset >
+
+  <div data-role="main" class="ui-content" >
+   <!-- <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Click here to EDIT</a><i class="fa fa-pencil" aria-hidden="true"></i>
+
+    <div data-role="popup" id="myPopup" class="ui-content">
+      <a href="#" ></a>-->
+      <form method="Post">
+	  
+	  Name1:<input type="text" id="n1">  Value1: <input type="decimal" id="a1"><br>
+	  Name2:<input type="text" id="n2">  Value2: <input type="decimal" id="a2"><br>
+	  Name3:<input type="text" id="n3">  Value3: <input type="decimal"id="a3"><br>
+	  Name4:<input type="text" id="n4">  Value4: <input type="decimal" id="a4">
+	  <br>
+	  <input type="submit" value="submit">
+	  </form>
+    </div>
+  </div>
+
+ </fieldset> 
+<?php
+include 'connection.php';
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+$x11=$_POST[n1];
+$x1=$_POST[a1];
+$x22=$_POST[n2];
+$x2=$_POST[a2];
+$x33=$_POST[n3];
+$x3=$_POST[a3];
+$x44=$_POST[n4];
+$x4=$_POST[a4];
+}
+else
+{
+echo"Hmm.....problem";
+}
+$sqll="insert into piechart(n1,a1,n2,a2,n3,a3,n4,a4)values('$x11',x1,'$x22',x2,'$x33',x3,'$x44',x4)";
+mysql_query($sqll,$conn);
+
+
+
+?>
+</body>
+</html>
+

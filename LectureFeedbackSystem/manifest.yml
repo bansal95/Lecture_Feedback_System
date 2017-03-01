@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 128M
+  instances: 1
+  domain: eu-gb.mybluemix.net
+  name: lecturelnmiit
+  host: lecturelnmiit
+  disk_quota: 1024M
+  services:
+  - Compose for MongoDB-ro
+  buildpack: php_buildpack
